@@ -6,6 +6,7 @@ def f(n):
             donbale.append(1)
         elif int(i) == 2:
             donbale.append(2)
+            donbale.append(2)
         else:
             donbale.append(int(i))
             x = donbale.count(donbale[-1])
@@ -13,7 +14,7 @@ def f(n):
                 donbale.append(donbale[-1])
                 x += 1
 
-            repeat = donbale[int(i)-1]
+            repeat = donbale[int(i)]
             
             
             
