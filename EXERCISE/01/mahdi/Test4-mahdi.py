@@ -1,28 +1,30 @@
 def f(n):
+    donbale_n = []
+    for i in range(1 ,int(n)+1):
+        donbale_n.append(i)
+
     donbale = []
     repeat = 2
-    for i in n:
-        if int(i) == 1:
+    for i in donbale_n:
+        if i == 1:
             donbale.append(1)
-        elif int(i) == 2:
+        elif i == 2:
             donbale.append(2)
             donbale.append(2)
         else:
-            donbale.append(int(i))
+            donbale.append(i)
             x = donbale.count(donbale[-1])
             while x < repeat:
                 donbale.append(donbale[-1])
                 x += 1
 
-            repeat = donbale[int(i)]
-            
-            
-            
-    return donbale
+            repeat = donbale[i]
+    index = donbale[int(n) - 1]
+                
+    return index
 
-n = input('donbale adad ra vared konid:(mesal: 1 2 3 4)   ')
-n = n.split(' ')
+n = input('N ra vared konid:   ')
 
-donbale = f(n)
+tekrar = f(n)
 
-print('F(n) = ', donbale)
+print('F(n) = ', tekrar)
