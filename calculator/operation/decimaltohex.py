@@ -1,11 +1,11 @@
 from model.operation import IOperation
 
 
-class HexToDecimal(IOperation):
+class DecimalToHex(IOperation):
     
     def __init__(self, operand):
         self.__operand = operand
         
     def operate(self) -> str:
-        result = int(str(self.__operand), 16)
-        return f'decimal({self.__operand}) = {result}'
+        result = format(self.__operand, '02x')
+        return f'Hex({self.__operand}) = {result}'
