@@ -7,6 +7,7 @@ if __name__ == '__main__':
     calculator.add(2, 3)
     calculator.add(5, 10)
     calculator.subtract(5, 1)
+    calculator.hextodecimal('18')
     calculator.memory()
     calculator.memory()
     calculator.clear()

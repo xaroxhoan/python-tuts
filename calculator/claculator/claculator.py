@@ -1,5 +1,6 @@
 from operation.addition import Addition
 from operation.subtraction import Subtraction
+from operation.hextodecimal import HexToDecimal
 
 
 class Calculator:
@@ -24,5 +25,10 @@ class Calculator:
 
     def subtract(self, operand1, operand2):
         instance = Subtraction(operand1, operand2)
+        self.__memory.append(instance)
+        print(instance.operate())
+        
+    def hextodecimal(self, operand):
+        instance = HexToDecimal(operand)
         self.__memory.append(instance)
         print(instance.operate())
