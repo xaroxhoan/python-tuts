@@ -10,5 +10,6 @@ class Factorial(IOperation):
         result = 1
         for i in range(1, self.__operand + 1):
             result *= i
-            
+
+        # nice job    
         return f'{self.__operand}! = {result}'
